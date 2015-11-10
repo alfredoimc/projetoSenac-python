@@ -1,0 +1,90 @@
+{% load staticfiles %}
+<!--www.videosdeti.com.br/vagrant.html   #359fc9-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>{% block titulo %}CCN{% endblock titulo %}</title>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+  <script type="text/javascript" src="{% static "js/jquery-2.1.4.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>
+</head>
+<body >
+    <div class=".carousel-indicators .active">
+      
+      <h1>CCN</a></h1>
+    <h2><a href="http://www.uespi.br/site">UESPI</a></h2>
+    </div>  
+    <nav class="navbar navbar-default" >
+    <div class="container-fluid">
+    <!-- Marca e alternância se agrupados para melhor visualização móvel -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+    <!-- Colete as ligações nav , formulários e outros conteúdos para alternar-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Sobre </a></li>
+        <li class="active"><a href="{% url 'core:contatos' %}">Contatos</a></li>
+        <li><a href="{% url 'templates:cadastrousuario' %}">Cadastre-se</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Coordenações <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'core:fisica' %}">Licenciatura em Fisica</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{% url 'core:matematica' %}">Licenciatura em Matematica</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{% url 'core:quimica' %}">Licenciatura em Quimica</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{% url 'core:bbiologia' %}">Bacharelado em Biologia</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{% url 'core:lbiologia' %}">Licenciatura em Biologia</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Pesquisar</button>
+      </form>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+   </div><!-- /.container-fluid -->
+  </script>
+</nav>
+
+<div class="centro"  >
+
+    {% block row %}
+
+    <div class="col-sm-5">
+    <h3>Noticias</h3>
+    </div>
+<div class="col-sm-5">
+<h3>Eventos</h3>
+    </div>
+    {% endblock row %} 
+</div>
+<div class="media" style="background-color:#DDD">
+  
+  </div>
+  
+    
+  </div>
+</div>
+
+</body>
+</html>
